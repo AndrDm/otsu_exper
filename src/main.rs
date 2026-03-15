@@ -53,7 +53,7 @@ pub fn otsu_threshold_16bit(hist: &[i32]) -> u16 {
 fn main() {
 	let image = ImaqImage::new(ImageType_enum_IMAQ_IMAGE_U16).unwrap();
 
-	if let Err(e) = image.read_file("Circle.tif") {
+	if let Err(e) = image.read_file("Zippo.tif") {
 		println!("Error reading file - {}", e);
 		return;
 	}

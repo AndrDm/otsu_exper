@@ -1,7 +1,7 @@
 # otsu_exper
 Some experiments with Otsu thresholding
 
-Interesting fact that different implementations will give us slightly different values.
+An interesting fact is that different implementations produce slightly different threshold values:
 
 |                                          | Zippo.tif | Circle.tif |
 | ---------------------------------------- | --------- | ---------- |
@@ -11,7 +11,7 @@ Interesting fact that different implementations will give us slightly different 
 | Matlab                                   | 9893      | 34059      |
 | Python (skimage.filters::threshold_otsu) | 9896      | 34036      |
 
-Interesting fact that my implementation same with Python and Matlab but on different images.
+Another interesting fact: my implementation gives the same results as Python and Matlab, but the values differ when applied to different images.
 
 Rust code:
 
@@ -64,6 +64,10 @@ pub fn otsu_threshold_16bit(hist: &[i32]) -> u16 {
 }
 
 ```
+
+LabVIEW Code:
+
+![](assets/snippet.png)
 
 Python Script:
 

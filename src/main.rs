@@ -60,6 +60,8 @@ fn main() {
 	let (_histo, hist_slice) =
 		image.compute_histogram(65536, 0.0, 65535.0).unwrap();
 	let thr = otsu_threshold_16bit(hist_slice);
+	let _ = image.display(0, 0);
+	//unsafe{imaqDisplayImage(image.as_ptr(), 0, 0)};
 	println!("Otsu threshold = {}", thr);
 }
 
